@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Reverse X - Make Twitter Twitter again",
   "description": "This extension reverses Twitter's recent rebranding to X by replacing its logos and any mentioning of the X-Brand",
   "version": "1.0",
@@ -9,7 +9,12 @@
       "js": ["content.js"]
     }
   ],
-  "web_accessible_resources": ["images/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/logo.png", "images/twitter.svg"],
+      "matches": ["https://twitter.com/*", "https://x.com/*"]
+    }
+  ],
   "permissions": ["activeTab"],
   "icons": { "16": "images/logo.png" }
 }
